@@ -33,7 +33,7 @@ class Game():
     def print_message(self):
         if self.tie == True:
             print('Tie game!')
-        if self.winner != 'None':
+        elif self.winner != 'None':
             print(f'{self.winner} wins the game!')
         else:
             print(f"It's player {self.turn}'s turn!")
@@ -80,7 +80,7 @@ class Game():
             self.turn = 'X'
 
     def play_game(self):
-        print("Let's play Tic tac toe!")
+        print("Let's go, Tic tac toe!")
         while self.winner == 'None' and self.tie == False:
             Game.render(self)
             Game.place_piece(self)
